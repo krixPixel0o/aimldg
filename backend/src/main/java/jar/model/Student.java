@@ -1,7 +1,8 @@
 package jar.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -13,7 +14,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     private String name;
-    @Column(unique=true)
+    @Column(nullable = false, unique=true)
     private String email;
     private String ip;
 
